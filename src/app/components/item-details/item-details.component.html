@@ -5,6 +5,6 @@
   <div class="card-body">
     <p class="card-text">{{item.title}}</p>
     <p class="card-text price">{{item.price | currency:"COP":"symbol-narrow"}}</p>
-    <a [routerLink]="['/item', item.id]">Ver detalles </a>
+    <p class="card-text">{{item.base_price}}</p>
   </div>
 </div>
