@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { ApiMercadoLibreService } from 'src/app/services/api-mercado-libre.service';
 
 @Component({
@@ -8,10 +8,12 @@ import { ApiMercadoLibreService } from 'src/app/services/api-mercado-libre.servi
 })
 export class HomeComponent implements OnInit {
 
+  @Input () value: string;
   items: Array<any>;
 
   constructor(private api: ApiMercadoLibreService) {
     this.items = [];
+    this.value = "";
    }
 
   ngOnInit(): void {

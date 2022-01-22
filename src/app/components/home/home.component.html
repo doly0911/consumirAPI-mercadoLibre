@@ -1,8 +1,7 @@
-<!--
-  <app-search-bar (item_name)="getItems($event)"></app-search-bar> -->
+<app-item-search (item_name)="getItem($event)"></app-item-search>
 <div class="container">
-  <div class="row">
-    <div class="col-12 col-md-3" *ngFor = "let item of items" >
+  <div class="row my-3">
+    <div class="col-12 col-md-3 mt-3" *ngFor = "let item of items" >
       <app-item-card [item]= "item" ></app-item-card>
     </div>
   </div>
