@@ -18,7 +18,7 @@ export class ItemSearchComponent implements OnInit {
   }
 
   getItems(){
-    console.log("valor ingresado", this.product)
+    console.log("valor ingresado", this.search)
     this.product.emit(this.search)
   }
 
