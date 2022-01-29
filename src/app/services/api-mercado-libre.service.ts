@@ -9,8 +9,8 @@ export class ApiMercadoLibreService {
 
   constructor(private http:HttpClient) { }
 
-  getItems(item_name:any){
-   return this.http.get(`https://api.mercadolibre.com/sites/MCO/search?q=${item_name}&limit=20`)
+  getItems(item_name:any, offset : any){
+   return this.http.get(`https://api.mercadolibre.com/sites/MCO/search?q=${item_name}&limit=20&offset=${offset}`)
   }
 
   getItemById(id_item:any){

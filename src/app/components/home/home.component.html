@@ -1,8 +1,11 @@
-<app-item-search (product)="getItem($event)"></app-item-search>
+<app-item-search (product)="getItem($event,0)"></app-item-search>
 <div class="container">
   <div class="row my-3">
     <div class="col-12 col-md-3 mt-3" *ngFor = "let item of items" >
       <app-item-card [item]= "item" ></app-item-card>
+    </div>
+    <div class="col-12 mt-3 text-center ">
+      <button class="btn btn-warning mt-3 " type="submit" (click) = "getItem(query,offset)">Ver más</button>
     </div>
   </div>
 </div>
