@@ -4,16 +4,11 @@ const path = require('path');
 const app = express();
 
 //archivos estaticos del directorio dist
-var dirPath = __dirname +'../dist/mercado-libre-angular';
+var dirPath =  './dist/mercado-libre-angular';
 app.use(express.static(dirPath));
-console.error("Directorio:" +__dirname);
-console.error("Directorio mecado libre:" +dirPath);
-
 //Enviar los requests al index.html
-app.get('/',function(req,res){
-  var indexPath = path.join(__dirname+'../dist/mercado-libre-angular/index.html');
-  console.error("Index path:" + indexPath)
-  res.sendFile(indexPath);
+app.get('/*',function(req,res){
+  res.sendFile('index.html',{root:'dist/mercado-libre-angular/'});
 });
 
 //Puerto para Heroku
