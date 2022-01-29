@@ -4,7 +4,7 @@ const path = require('path');
 const app = express();
 
 //archivos estaticos del directorio dist
-app.use(express.static(__dirname+'/dist/mercado-libre-angular'));
+app.use(express.static(__dirname+'/dist'));
 
 //Enviar los requests al index.html
 app.get('/',function(req,res){
